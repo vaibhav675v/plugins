@@ -3,9 +3,7 @@ import asyncio
 from telethon import events, Button, version
 from datetime import datetime
 from RiZoeLXSpam import ALIVE_PIC, rizoelversion
-
 from RiZoeLXSpam import STRING, STRING2, STRING3, STRING4, STRING5 , STRING6, STRING7, STRING8, STRING9, STRING10, STRING11, STRING12, STRING13, STRING14, STRING15, STRING16, STRING17, STRING18, STRING19, STRING20, STRING21, STRING22, STRING23, STRING24, STRING25, STRING26, STRING27, STRING28, STRING29, STRING30, STRING31, STRING32, STRING33, STRING34, STRING35, STRING36, STRING37, STRING38, STRING39, STRING40
-
 from telethon.tl.functions.users import GetFullUserRequest
 
 
@@ -178,28 +176,22 @@ async def _(event):
   
 #-------------------------------#---------------------------#-----------------------------#---------------------------#
 
-
-
 RIZ_PIC = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/ba87c58f01a6fcb5ef512.jpg"
-
         
 @RiZoeL.on(events.NewMessage(pattern="[!/]ping"))
 async def Botping(e):
-        if e.sender_id not in SUDO_USERS or e.sender_id not in DEV:
-             return
-        fuk = await e.reply("Pᴏɴɢ!!.....")
-        start = datetime.now()
-        end = datetime.now()
-        ms = (end-start).microseconds / 1000              
-        pingop = f"๏ sᴘᴀᴍ X ᴀssɪsᴛᴀɴᴛ ๏\n\n ᴘᴏɴɢ: `{ms}` ᴍs \n ᴠᴇʀsɪᴏɴ: {rizoelversion}" 
-        await fuk.edit(pingop)
-        
+  if e.sender_id in SUDO_USERS or e.sender_id in DEV:
+       fuk = await e.reply("Pᴏɴɢ!!.....")
+       start = datetime.now()
+       end = datetime.now()
+       ms = (end-start).microseconds / 1000              
+       pingop = f"๏ sᴘᴀᴍ X ᴀssɪsᴛᴀɴᴛ ๏\n\n ᴘᴏɴɢ: `{ms}` ᴍs \n ᴠᴇʀsɪᴏɴ: {rizoelversion}" 
+       await fuk.edit(pingop)
 
 
 @RiZoeL.on(events.NewMessage(pattern="[!/]alive"))
 async def alive(event):
-        if event.sender_id not in SUDO_USERS or event.sender_id not in DEV:
-              return
+  if event.sender_id in SUDO_USERS or event.sender_id in DEV:
         ids = 0
         try:
            if STRING:
@@ -319,17 +311,16 @@ async def alive(event):
 
 @RiZoeL.on(events.NewMessage(pattern="[!/]restart"))
 async def restart(event):
-    if event.sender_id not in DEV:
-        return
-    text = "**• Restarting •**"
-    await event.reply(text, parse_mode=None, link_preview=None )
-    try:
-       await RiZoeL.disconnect()
-    except Exception:
-       pass
-    os.execl(sys.executable, sys.executable, *sys.argv)
-       quit()
+  if event.sender_id in DEV:
+     text = "**• Restarting •**"
+     await event.reply(text, parse_mode=None, link_preview=None )
+     try:
+        await RiZoeL.disconnect()
+     except Exception:
+        pass
+     os.execl(sys.executable, sys.executable, *sys.argv)
+        quit()
     
-    if event.sender_id in SUDO_USERS:
+  if event.sender_id in SUDO_USERS:
         await event.reply("**Sorry !! You can't Use this Cmd only Owner and Full Sudo Users can**")
        
