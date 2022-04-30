@@ -32,17 +32,6 @@ if BOT_TOKEN:
             shortname = path1.stem
             Start_Assistant(shortname.replace(".py", ""))
 
-
-if BOT_TOKEN:
-    path = "RiZoeLXSpam/assistant/plugins/*.py"
-    files = glob.glob(path)
-    for name in files:
-        with open(name) as f:
-            path1 = Path(f.name)
-            shortname = path1.stem
-            load_Assistant(shortname.replace(".py", ""))
-    print("Assisting Bot set up completely!")
-
 print("RiZoeL X Spam Successfully deployed -!")
 print("Enjoy! Do visit @RiZoeLX")
 
