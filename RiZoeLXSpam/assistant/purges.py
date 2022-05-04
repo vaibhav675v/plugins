@@ -1,7 +1,7 @@
 from telethon import events, Button
 import time
 from RiZoeLXSpam.event import *
-
+from RiZoeLXSpam import RiZoeL
 #ook
 
 @RiZoeL.on(events.NewMessage(pattern=r"^[?!]purge"))
