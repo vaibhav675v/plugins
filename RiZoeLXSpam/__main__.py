@@ -1,4 +1,5 @@
-#RiZoeLXSpam By @TheRiZoeL
+# RiZoeL X Spam | © 2022-2023 @RiZoeLX
+# Kang With Credits
 
 import asyncio
 import sys
