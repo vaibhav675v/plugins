@@ -1,5 +1,6 @@
 # RiZoeLXSpam - Spam Userbots
-# Copyright © 2021 @RiZoeLX
+# Copyright © 2022-2023 @RiZoeLX
+# Kang With Credits
 
 import os
 import sys
