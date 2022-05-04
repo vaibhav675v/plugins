@@ -1,4 +1,4 @@
-
+from RiZoeLXSpam import RiZoeL
 from RiZoeLXSpam.event import *
 from telethon import events, Button
 from telethon.tl.functions.channels import EditBannedRequest
