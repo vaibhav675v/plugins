@@ -1,6 +1,6 @@
 from telethon import events, Button, types
 from RiZoeLXSpam.event import *
-
+from RiZoeLXSpam import RiZoeL
 
 @RiZoeL.on(events.NewMessage(pattern="^[?!/]pinned"))
 async def get_pinned(event):
