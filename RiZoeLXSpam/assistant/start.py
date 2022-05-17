@@ -10,11 +10,11 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 btn = [
       [ 
-      Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/RiZoeLX"),
-      Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/DNHxHELL")
+      Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/+1dTFdtsVaGwyMjM1"),
+      Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/+1dTFdtsVaGwyMjM1")
       ],
       [
-      Button.url("• Source Code •", "https://GitHub.com/MrRizoel/RiZoeLXSpam")
+      Button.url("• Source Code •", "https://github.com/vaibhav675v")
       ],
       [
       Button.inline("• Help And Commands •", data="help")
@@ -34,7 +34,7 @@ HELP_TEXT = """
 
 **Available Modules Given Below Click On buttons To Know usage**
 
-__Report Bugs At :__ **@DNHxHELL**
+__Report Bugs At :__ **@x0x_VAIBHAV_x0x**
 
 All cmd can be used with ! or /.
 """
@@ -304,8 +304,8 @@ async def alive(event):
                                 caption=Caption, 
                                 buttons=[
            [
-           Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/RiZoeLX"),
-           Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/DNHxHELL")
+           Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/+1dTFdtsVaGwyMjM1"),
+           Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/+1dTFdtsVaGwyMjM1")
            ], 
            ], 
            )
